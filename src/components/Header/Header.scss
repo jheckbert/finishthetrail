@@ -1,0 +1,182 @@
+.header {
+    
+    &__container {
+        // background-image: url("../images/Toronto-skyline-sunrise.jpg");
+        // background-repeat: no-repeat;
+        // background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 800px;
+        filter: blur(0px) opacity(.5);
+        
+    }
+    
+    &__banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 75%;
+        color: black;
+        // border: 2px solid black;
+        // border-radius: 8px;
+        // margin-left: 5%;
+        background: linear-gradient(217deg, rgba(203, 210, 218, 0.747), rgba(60, 99, 228, 0) 70.71%), 
+                    linear-gradient(127deg, rgba(223, 232, 242, 0.8), rgba(90, 160, 224, 0) 70.71%), 
+                    linear-gradient(336deg, rgba(108, 108, 118, 0.8), rgba(0, 0, 255, 0) 70.71%);
+        position: absolute;
+        top: 35%;   
+        
+    }
+
+    @media screen and (max-width: 1439px) { 
+    &__blink-white {
+        display: none;
+    }}
+    
+    
+    @media screen and (min-width: 1440px) { 
+    &__blink-white {
+        font-size: medium;
+        position: absolute;
+        top: 12%;
+        left: 49.7%;
+        animation: blinkingWhite 0.8s infinite;
+        color: white;
+    }}
+
+    @media screen and (max-width: 1439px) { 
+    &__blink-red {
+        display: none;
+    }}
+
+    @media screen and (min-width: 1440px) { 
+    &__blink-red {
+        font-size: medium;
+        position: absolute;
+        top: 57%;
+        left: 31%;
+        animation: blinkingRed 0.8s infinite;
+        color: red;
+    }}
+
+    @media screen and (max-width: 767px) { 
+    &__skill-web-dev {
+        font-size: 1.5rem;
+        margin-left: 10%;
+        position: absolute;
+        top: 7%;
+    }
+    &__skill-web-dev:hover {
+        font-size: 1.5rem;
+        animation: blinkingWord 0.8s infinite;
+    }}
+        
+    @media screen and (min-width: 768px) { 
+    &__skill-web-dev {
+        font-size: 2.5rem;
+        margin-left: 10%;
+        position: absolute;
+        top: 7%;
+    }
+    &__skill-web-dev:hover {
+        font-size: 2.5rem;
+        animation: blinkingWord 0.8s infinite;
+
+    }}
+ 
+    @media screen and (max-width: 767px) { 
+        &__skill-web-sec {
+            font-size: 1.5rem;
+            margin-left: 55%;
+            position: absolute;
+            top: 12%;
+        }
+        &__skill-web-sec:hover {
+            font-size: 1.5rem;
+            animation: blinkingWord 0.8s infinite;
+        }}
+            
+        @media screen and (min-width: 768px) { 
+        &__skill-web-sec {
+            font-size: 2.5rem;
+            margin-left: 55%;
+            position: absolute;
+            top: 12%;
+        }
+        &__skill-web-sec:hover {
+            font-size: 2.5rem;
+            animation: blinkingWord 0.8s infinite;
+    
+        }}
+
+    @media screen and (max-width: 767px) { 
+        &__myPic {
+            display: none;
+        }}
+
+
+    @media screen and (min-width: 768px) { 
+        &__myPic {
+        margin-top: -25px;
+        margin-right: 35px;
+        border-radius: 8px;
+    }}
+    &__myPic:hover {
+        transform: scaleX(-1);
+        // transform: rotate(180deg);
+        animation: spinningPic 0.2s;
+
+    }
+
+    
+    @media screen and (max-width: 768px) { 
+    &__title {
+        font-size: 1.5rem;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        filter: blur(0px) opacity(.9);
+        
+    }}
+    
+    @media screen and (min-width: 769px) { 
+    &__title {
+        font-size: 2rem;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        filter: blur(0px) opacity(.9);
+        
+    }}
+}
+
+@keyframes blinkingWhite {
+    0%{     color: white;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color: transparent;  }
+    100%{   color: white;    }
+}
+@keyframes blinkingRed {
+    0%{     color: red;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color: transparent;  }
+    100%{   color: red;    }
+}
+@keyframes spinningPic {
+    0%{     transform: scaleX(-.33); }
+    20%{    transform: scaleX(-.66) }
+    40%{    transform: scaleX(-1); }  
+    60%{    transform: scaleX(.66); }
+    80%{    transform: scaleX(.33); }
+    100%{   transform: rotate(-.1); }
+}
+@keyframes blinkingWord {
+    0%{     color: black;    }
+    25%{    color: transparent; }
+    50%{    color: black; }
+    75%{    color: transparent;  }
+    100%{   color: black;    }
+}
